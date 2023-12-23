@@ -1,0 +1,55 @@
+﻿<Window x:Class="Demo_NoPattern.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TrayIcon NoPattern"
+        Width="500"
+        Height="500"
+        MinWidth="500"
+        MinHeight="500">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Width="400"
+                    Margin="0,40"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <CheckBox x:Name="openWindowOnClick"
+                      Click="OnOpenWindowOnClickClick"
+                      Content="OpenWindowOnClick"
+                      IsChecked="False" />
+            <TextBlock Margin="0,0,0,20"
+                       Text="Opens the minimized application back to its previous state if the user clicks on the tray icon. If context menu is set, right click will not trigger it."
+                       TextWrapping="Wrap" />
+
+            <CheckBox x:Name="openWindowOnDoubleClick"
+                      Click="OnOpenWindowOnDoubleClickClick"
+                      Content="OpenWindowOnDoubleClick"
+                      IsChecked="True" />
+            <TextBlock Margin="0,0,0,20"
+                       Text="Opens the minimized application back to its previous state if the user double clicks on the tray icon. If context menu is set, right click will not trigger it."
+                       TextWrapping="Wrap" />
+
+            <CheckBox x:Name="minimizeToTray"
+                      Click="OnMinimizeToTrayClick"
+                      Content="MinimizeToTray"
+                      IsChecked="False" />
+            <TextBlock Text="If set, the owner window gets removed from the task bar if minimized. The user then has to use the context menu item to bring it back up." TextWrapping="Wrap" />
+            <TextBlock Margin="0,0,0,20" TextWrapping="Wrap">
+                <Run FontWeight="Bold">Warning:</Run>
+                <Run>If that is set and the tray icon is not configured to bring the owner window back up. By single click, double click or menu entry, then the user has no change to get the minimized window back on the screen.</Run>
+            </TextBlock>
+
+            <TextBlock Text="ToolTip" />
+            <TextBox x:Name="toolTip"
+                     Margin="0,0,0,20"
+                     Text="Chapter SystemTray"
+                     TextChanged="OnToolTipChanged" />
+
+            <CheckBox x:Name="hideIfWindowShown"
+                      Click="OnHideIfWindowShownClick"
+                      Content="HideIfWindowShown"
+                      IsChecked="False" />
+            <TextBlock Text="Configures the TrayIcon that way that the icon is shown only if the owner window is minimized." TextWrapping="Wrap" />
+        </StackPanel>
+    </ScrollViewer>
+
+</Window>

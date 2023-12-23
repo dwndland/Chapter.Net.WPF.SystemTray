@@ -1,0 +1,82 @@
+﻿<Window x:Class="SystemTray_MVVM.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:chapter="clr-namespace:Chapter.Net.WPF.SystemTray;assembly=Chapter.Net.WPF.SystemTray"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:SystemTray_MVVM.ViewModels"
+        Title="TrayIcon MVVM"
+        Width="500"
+        Height="500"
+        MinWidth="500"
+        MinHeight="500"
+        d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
+        mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Themes/Dark.xaml" />
+                <!--<ResourceDictionary Source="../Themes/Light.xaml" />-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <chapter:Tray.TrayIcon>
+        <chapter:TrayIcon ClickCommand="{Binding SingleClickCommand}"
+                          ClickCommandParameter="Single Click Parameter"
+                          DoubleClickCommand="{Binding DoubleClickCommand}"
+                          DoubleClickCommandParameter="Double Click Parameter"
+                          HideIfWindowShown="{Binding HideIfWindowShown}"
+                          Icon="Demo_MVVM.exe"
+                          MinimizeToTray="{Binding MinimizeToTray}"
+                          Notification="{Binding Notification}"
+                          OpenWindowOnClick="{Binding OpenWindowOnClick}"
+                          OpenWindowOnDoubleClick="{Binding OpenWindowOnDoubleClick}"
+                          ToolTip="{Binding ToolTip}">
+            <chapter:TrayIcon.ContextMenu>
+                <ContextMenu>
+                    <chapter:ShowWindowMenuItem FontSize="{Binding FontSize}"
+                                                FontWeight="Bold"
+                                                Header="Chapter SystemTray" />
+                    <MenuItem Command="{Binding IncreaseFontCommand}" Header="Increase Font Settings" />
+                    <MenuItem Command="{Binding DecreaseFontCommand}" Header="Decrease Font Settings" />
+                    <Separator />
+                    <MenuItem Command="{Binding ShowNotificationCommand}" Header="Show Notification" />
+                    <Separator />
+                    <MenuItem Command="{Binding ShutdownCommand}" Header="Quit" />
+                </ContextMenu>
+            </chapter:TrayIcon.ContextMenu>
+        </chapter:TrayIcon>
+    </chapter:Tray.TrayIcon>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Width="400"
+                    Margin="0,40"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <CheckBox Content="OpenWindowOnClick" IsChecked="{Binding OpenWindowOnClick}" />
+            <TextBlock Margin="0,0,0,20"
+                       Text="Opens the minimized application back to its previous state if the user clicks on the tray icon. If context menu is set, right click will not trigger it."
+                       TextWrapping="Wrap" />
+
+            <CheckBox Content="OpenWindowOnDoubleClick" IsChecked="{Binding OpenWindowOnDoubleClick}" />
+            <TextBlock Margin="0,0,0,20"
+                       Text="Opens the minimized application back to its previous state if the user double clicks on the tray icon. If context menu is set, right click will not trigger it."
+                       TextWrapping="Wrap" />
+
+            <CheckBox Content="MinimizeToTray" IsChecked="{Binding MinimizeToTray}" />
+            <TextBlock Text="If set, the owner window gets removed from the task bar if minimized. The user then has to use the context menu item to bring it back up." TextWrapping="Wrap" />
+            <TextBlock Margin="0,0,0,20" TextWrapping="Wrap">
+                <Run FontWeight="Bold">Warning:</Run>
+                <Run>If that is set and the tray icon is not configured to bring the owner window back up. By single click, double click or menu entry, then the user has no change to get the minimized window back on the screen.</Run>
+            </TextBlock>
+
+            <TextBlock Text="ToolTip" />
+            <TextBox Margin="0,0,0,20" Text="{Binding ToolTip, UpdateSourceTrigger=PropertyChanged}" />
+
+            <CheckBox Content="HideIfWindowShown" IsChecked="{Binding HideIfWindowShown}" />
+            <TextBlock Text="Configures the TrayIcon that way that the icon is shown only if the owner window is minimized." TextWrapping="Wrap" />
+        </StackPanel>
+    </ScrollViewer>
+
+</Window>
