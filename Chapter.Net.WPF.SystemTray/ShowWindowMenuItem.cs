@@ -8,30 +8,29 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Chapter.Net.WPF.SystemTray
+namespace Chapter.Net.WPF.SystemTray;
+
+/// <summary>
+///     Represents a menu item to bring a minimized window back to normal or maximized.
+/// </summary>
+public sealed class ShowWindowMenuItem : MenuItem
 {
     /// <summary>
-    ///     Represents a menu item to bring a minimized window back to normal or maximized.
+    ///     Creates a new menu item bringing up the given window.
     /// </summary>
-    public sealed class ShowWindowMenuItem : MenuItem
+    public ShowWindowMenuItem()
     {
-        /// <summary>
-        ///     Creates a new menu item bringing up the given window.
-        /// </summary>
-        public ShowWindowMenuItem()
-        {
-            Click += OnClick;
-        }
+        Click += OnClick;
+    }
 
-        private void OnClick(object sender, EventArgs e)
+    private void OnClick(object sender, EventArgs e)
+    {
+        var window = Window.GetWindow(this);
+        if (window != null)
         {
-            var window = Window.GetWindow(this);
-            if (window != null)
-            {
-                window.ShowInTaskbar = true;
-                TrayIcon.RestoreFromMinimize(window);
-                window.Activate();
-            }
+            window.ShowInTaskbar = true;
+            TrayIcon.RestoreFromMinimize(window);
+            window.Activate();
         }
     }
 }
