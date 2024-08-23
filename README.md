@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/dwndlnd/Chapter.Net.WPF.SystemTray/master/Icon.png" alt="logo" width="64"/>
+<img src="https://raw.githubusercontent.com/dwndland/Chapter.Net.WPF.SystemTray/master/Icon.png" alt="logo" width="64"/>
 
 # Chapter.Net.WPF.SystemTray Library
 
@@ -11,11 +11,11 @@ Styling the context menu in the system tray was never more easy. Just as an exam
 
 ## Preview
 * Unstyled with Native WPF  
-![Default](https://raw.githubusercontent.com/dwndlnd/Chapter.Net.WPF.SystemTray/master/Images/Default.png)
+![Default](https://raw.githubusercontent.com/dwndland/Chapter.Net.WPF.SystemTray/master/Images/Default.png)
 * Styled with a light and dark theming  
-![Light](https://raw.githubusercontent.com/dwndlnd/Chapter.Net.WPF.SystemTray/master/Images/Light.png) ![Dark](https://raw.githubusercontent.com/dwndlnd/Chapter.Net.WPF.SystemTray/master/Images/Dark.png)
+![Light](https://raw.githubusercontent.com/dwndland/Chapter.Net.WPF.SystemTray/master/Images/Light.png) ![Dark](https://raw.githubusercontent.com/dwndland/Chapter.Net.WPF.SystemTray/master/Images/Dark.png)
 * Special Features  
-![Options](https://raw.githubusercontent.com/dwndlnd/Chapter.Net.WPF.SystemTray/master/Images/Options.png)
+![Options](https://raw.githubusercontent.com/dwndland/Chapter.Net.WPF.SystemTray/master/Images/Options.png)
 
 ## Features
 - **Tray icon management:** Have a tray icon for a owner window.
@@ -276,7 +276,7 @@ Styling the context menu in the system tray was never more easy. Just as an exam
 
 ## Links
 - [NuGet](https://www.nuget.org/packages/Chapter.Net.WPF.SystemTray)
-- [GitHub](https://github.com/dwndlnd/Chapter.Net.WPF.SystemTray)
+- [GitHub](https://github.com/dwndland/Chapter.Net.WPF.SystemTray)
 
 ## License
 Copyright (c) David Wendland. All rights reserved.

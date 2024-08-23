@@ -1,7 +1,8 @@
-﻿// 
-// Copyright (c) David Wendland. All rights reserved.
-// Licensed under the MIT License. See LICENSE file in the project root for full license information.
-// 
+﻿// -----------------------------------------------------------------------------------------------------------------
+// <copyright file="MainView.xaml.cs" company="dwndland">
+//     Copyright (c) David Wendland. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------------------------------------------------
 
 using SystemTray_MVVM.ViewModels;
 

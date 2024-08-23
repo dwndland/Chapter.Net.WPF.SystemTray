@@ -1,7 +1,8 @@
-﻿// 
-// Copyright (c) David Wendland. All rights reserved.
-// Licensed under the MIT License. See LICENSE file in the project root for full license information.
-// 
+﻿// -----------------------------------------------------------------------------------------------------------------
+// <copyright file="MainViewModel.cs" company="dwndland">
+//     Copyright (c) David Wendland. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------------------------------------------------
 
 using System;
 using System.Diagnostics;
@@ -13,12 +14,12 @@ namespace SystemTray_MVVM.ViewModels;
 public class MainViewModel : ObservableObject
 {
     private float _fontSize;
+    private bool _hideIfWindowShown;
+    private bool _minimizeToTray;
     private NotificationData _notification;
     private bool _openWindowOnClick;
     private bool _openWindowOnDoubleClick;
-    private bool _minimizeToTray;
     private string _toolTip;
-    private bool _hideIfWindowShown;
 
     public MainViewModel()
     {
