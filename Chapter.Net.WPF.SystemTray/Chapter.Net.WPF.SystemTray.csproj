@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFrameworks>net8.0-windows;net9.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
-    <Version>2.0.0</Version>
+    <Version>2.1.0</Version>
     <Authors>David Wendland</Authors>
     <Description>Chapter.Net.WPF.SystemTray brings objects and helper to work with the Windows system tray icon, its context menu and notifications.</Description>
     <Copyright>Copyright (c) 2024 David Wendland</Copyright>
@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Chapter.Net.WPF" Version="2.0.0" />
+    <PackageReference Include="Chapter.Net.WPF" Version="3.3.0" />
   </ItemGroup>
 
 </Project>
