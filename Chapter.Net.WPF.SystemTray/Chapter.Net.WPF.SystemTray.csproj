@@ -6,8 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Version>2.1.0</Version>
     <Authors>David Wendland</Authors>
-    <Description>Chapter.Net.WPF.SystemTray brings objects and helper to work with the Windows system tray icon, its context menu and notifications.</Description>
-    <Copyright>Copyright (c) 2024 David Wendland</Copyright>
+    <Description>Chapter.Net.WPF.SystemTray is a library that provides all the necessary tools to create and manage custom, styled system tray icons in WPF applications.</Description>
+    <Copyright>Copyright (c) 2025 David Wendland</Copyright>
     <PackageProjectUrl>https://github.com/dwndland/Chapter.Net.WPF.SystemTray</PackageProjectUrl>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>

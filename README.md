@@ -3,11 +3,7 @@
 # Chapter.Net.WPF.SystemTray Library
 
 ## Overview
-As everybody know, up to now, end of 2024, WPF itself does still not have any build in functionality to maintain a tray icon or windows notification.
-Many people therefore go ahead and use the NotifyIcon from System.Windows.Forms. Thats fine in general, to have at least something. But you cannot have special features and you cannot style it properly without struggling with the Forms Themeing.
-
-Chapter.Net.WPF.SystemTray now fills that gap. With that library you have a control to create the tray icon, configure its behavior and you can use the WPF ContextMenu with all its features.
-Styling the context menu in the system tray was never more easy. Just as an example.
+Chapter.Net.WPF.SystemTray is a library that provides all the necessary tools to create and manage custom, styled system tray icons in WPF applications.
 
 ## Preview
 * Unstyled with Native WPF  
